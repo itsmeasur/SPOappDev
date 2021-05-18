@@ -7,6 +7,41 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+       <script type="text/javascript">  //javascript to make written sentences dynamic.
+        var myQuotes =  new Array();    //But some error is there.
+  
+        myQuotes.push("The purpose of our lives is to be happy.");
+        myQuotes.push("Life is what happens when you’re busy making other plans.");
+        myQuotes.push("Get busy living or get busy dying.");
+
+
+        function shuffle(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex ;
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+                // Picking up a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+
+        $(".intro-text").typed({
+            strings: myQuotes,
+            typeSpeed: 8,
+            backDelay: 3000,
+            startDelay: 200,
+            loop: true,
+            loopCount: false,
+            cursorChar: "|"
+        });
+       </script>
     </head>
     <body>
         <header>
@@ -24,13 +59,17 @@
                 </div>
             </nav>
             <div class="main-content-header">
-            <h1>HELLO I'M <span class="colorchange">AAKASh</span>.<br>
-                NICE TO SEE YOU SEARCHING ME.</h1>
-                <a href="mailto:tusharkumar.ts123@gmail.com" class="btn btn-full"> aakashrathi68@gmail.com</a>
+            <h1>HELLO I'M <span class="colorchange">AAKASH</span>.<br>
+                NICE TO SEE YOU, Stay home and Stay safe :)</h1>
+                <a href="mailto:aakashrathi68@gmail.com" class="btn btn-full"> aakashrathi68@gmail.com</a>
                 <a href="https://www.instagram.com/aaakashr/" class="btn btn-nav"> Instagram</a>
-
-            
-                
+                <div class="col-md-10 col-md-offset-1">
+                    <h1 class="brand-heading">&nbsp;</h1>
+                    <h1 class="brand-heading">&nbsp;</h1>
+                    <span class="intro-text"><script>shuffle(myQuotes);</script></span><span class="typed-cursor"></span>
+                    <!--Try to do something dynamic but it is not working. It is linked with above javascript code-->
+                    <h5>&nbsp;</h5>
+                </div>      
         </header>
 
         <script type="text/javascript">
