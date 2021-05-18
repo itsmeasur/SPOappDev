@@ -117,24 +117,20 @@ h1{
 }
 
 
-
-
-/*////////////Responsive queries/////////*/
-
-@media only screen  and (max-width: 1180px){
+@media only screen  and (max-width: 1180px){ /*for lappy*/
     .main-content-header{
         width: 100%;
         padding: 0 2%;
     }
 }
 
-@media only screen  and (max-width: 998px){
+@media only screen  and (max-width: 998px){ /*for tablets*/
     h1{
         font-size: 200%;
     }
 }
 
-@media only screen  and (max-width: 768px){
+@media only screen  and (max-width: 768px){  /*for mobile usage*/
     h1{
         font-size: 180%;
     }
